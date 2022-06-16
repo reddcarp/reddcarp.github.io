@@ -6,18 +6,26 @@
 -->
 <html>
   <head>
-    <title>Not wordle - Marvin Libam</title>
+    <title>Not Wordle - Marvin Libam</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <noscript
+      ><link rel="stylesheet" href="../assets/css/noscript.css"
+    /></noscript>
   </head>
   <body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
-      <header id="header">
-        <a href="../index.html" class="logo"><strong>Portfolio</strong> <span>Marvin Libam</span></a>
+      <!-- Note: The "styleN" class below should match that of the banner element. -->
+      <header id="header" class="alt style2">
+        <a href="../index.html" class="logo"
+          ><strong>Portfolio</strong> <span>Marvin Libam</span></a
+        >
         <nav>
           <a href="#menu">Menu</a>
         </nav>
@@ -28,25 +36,84 @@
         <ul class="links">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../index.html#one">Projects</a></li>
-          <li><a href="pages/about-me.html">More about me</a></li>
+          <li><a href="about-me.html">More about me</a></li>
         </ul>
       </nav>
 
+      <!-- Banner -->
+      <!-- Note: The "styleN" class below should match that of the header element. -->
+      <section id="banner" class="style2">
+        <div class="inner">
+          <span class="image">
+            <img src="../images/not_wordle/not_wordle.png" alt="" />
+          </span>
+          <header class="major">
+            <h1>Not Wordle</h1>
+          </header>
+          <div class="content">
+            <p>A fully responsive React wordle clone</p>
+          </div>
+          <a href="https://github.com/reddcarp/not-wordle" class="button"
+            >See the code on Github</a
+          >
+        </div>
+      </section>
+
       <!-- Main -->
-      <div id="main" class="alt">
+      <div id="main">
         <!-- One -->
         <section id="one">
           <div class="inner">
             <header class="major">
-              <h1>Not wordle</h1>
-              <a href="https://github.com/reddcarp/bmi_calculator" style="align-self: flex-end" class="button">See code on github</a>
+              <h2>Introduction</h2>
             </header>
-
-            <span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+            <p>
+              This app is a copy of the popular word game 'Wordle' made by Josh
+              Wardle. <br />
+              Working on the development of this application was both a great
+              deal of fun and knowledge.
+            </p>
+            <p>
+              I strengthened my knowledge regarding CSS. I got to use some of
+              the many functionalities of CSS including putting in place nice
+              animations, pleasant styles with properties and transformations
+              such as 'text-transform'. To ensure that the content is always
+              displayed in a proper way I used media queries to make the app
+              responsive as well as using '-webkit-fill-available' to obtain the
+              proper screen height on mobile. As such I got to learn a lot more
+              about CSS and got to appreciate all the possibilities it offers.
+            </p>
+            <p>
+              Of course I also got to further my knowledge of React. I created
+              custom components and a hook for the game activity. I also
+              utilized a library component 'react-toast' for the toast
+              notification and utilized the React hooks 'useState' and
+              'useEffect'. Through the development of the different components
+              and functions, I utilized TypeScript to assure correct usage of
+              the different objects. Finally, when need be I used tests with
+              Jest to ensure the proper behavior of key functions.
+            </p>
           </div>
+        </section>
+
+        <!-- Two -->
+        <section id="two" class="spotlights">
+          <section>
+            <div class="content">
+              <div class="inner">
+                <header class="major">
+                  <h3>Try out the app</h3>
+                </header>
+                <p>
+                  To try the app out just head over to
+                  <a href="https://marvin-libam.com/not-wordle"
+                    >marvin-libam.com/not-wordle</a
+                  >
+                  on any device and enjoy it :)
+                </p>
+              </div>
+            </div>
+          </section>
         </section>
       </div>
 
@@ -55,13 +122,24 @@
         <div class="inner">
           <ul class="icons">
             <li>
-              <a href="https://www.linkedin.com/in/marvin-libam" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a>
+              <a
+                href="https://www.linkedin.com/in/marvin-libam"
+                class="icon brands alt fa-linkedin"
+                ><span class="label">LinkedIn</span></a
+              >
             </li>
             <li>
-              <a href="https://github.com/reddcarp" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+              <a
+                href="https://github.com/reddcarp"
+                class="icon brands alt fa-github"
+                ><span class="label">GitHub</span></a
+              >
             </li>
           </ul>
-          <p>Email: <a href="mailto: libam.marvin@gmail.com">libam.marvin@gmail.com</a></p>
+          <p>
+            Email:
+            <a href="mailto: libam.marvin@gmail.com">libam.marvin@gmail.com</a>
+          </p>
           <ul class="copyright">
             <li>&copy; Marvin libam</li>
             <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
