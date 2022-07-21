@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Minimalist clock - Marvin Libam</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="../assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <!-- Note: The "styleN" class below should match that of the banner element. -->
+      <header id="header" class="alt style2">
+        <a href="../index.html" class="logo"
+          ><strong>Portfolio</strong> <span>Marvin Libam</span></a
+        >
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#one">Projects</a></li>
+          <li><a href="about-me.html">More about me</a></li>
+        </ul>
+      </nav>
+
+      <!-- Banner -->
+      <!-- Note: The "styleN" class below should match that of the header element. -->
+      <section id="banner" class="style2">
+        <div class="inner">
+          <span class="image">
+            <img src="../images/minimalist_clock/background.jpg" alt="" />
+          </span>
+          <header class="major">
+            <h1>Minimalist clock</h1>
+          </header>
+          <div class="content">
+            <p>A google chrome extension</p>
+          </div>
+          <!-- <a href="https://github.com/reddcarp/not-wordle" class="button"
+            >See the code on Github</a
+          > -->
+        </div>
+      </section>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <header class="major">
+              <h2>Introduction</h2>
+            </header>
+            <p>
+              This chrome extension displays a minimalist clock as well as the weather.
+            </p>
+            <p>
+              Working on making the extension taught me a lot regarding what goes into making one for chrome.
+              From how to store the user's preferences, to background scripts and content scripts that get injected into web pages, this was a great learning experience.
+              For future proof reasons,  I decided to use the version 3 of the manifest file.
+            <p>
+              For the weather, I used the openWeather API to fetch the weather data. The API is free but the number of calls is limited to 60 per minute.
+              As such i utilized the chrome alarm API to fetch the weather data every hour, as to limit the number of calls. Once fetched, the response is parsed and the data is stored in chrome's local storage.
+              A listener on the content script is set up to listen to the storage change event and update the weather accordingly.
+              <br/> The user's position is updated in the popup as it is impossible to get it in the background script.
+            </p>
+            <p>
+              The time displayed on each of the clocks is simply updated using the js setInterval function. The clocks are updated every minute as they do not display the seconds.
+            </p>
+            <p>
+              Format changes are handled in the popup. The user can change the time and temperature format. This change is stored in chrome's local storage,
+              and once again, the content script (ie: the clock element in each page) is listening to the storage change event and updates the clock accordingly.
+            </p>
+          </div>
+        </section>
+
+        <!-- Two -->
+        <section id="two" class="spotlights">
+          <section>
+            <a class="image">
+              <img
+                src="../images/minimalist_clock/Screen1.png"
+                alt=""
+                data-position="center center"
+              />
+            </a>
+            <div class="content">
+              <div class="inner">
+                <header class="major">
+                  <h3>Try out the extension</h3>
+                </header>
+                <p>
+                  To try the app out just head over to the
+                  <a href="https://chrome.google.com/webstore/detail/minimalist-clock/dhlcfelpfaohophbekdiehhnblhblell"
+                    >chrome web store</a
+                  >
+                  and download the extension (using chrome is a requirement).
+                </p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <a class="image">
+              <img
+                src="../images/minimalist_clock/Screen2.png"
+                alt=""
+                data-position="center center"
+              />
+            </a>
+            <div class="content">
+              <div class="inner">
+                <header class="major">
+                  <h3>Beautiful frosted glass effect</h3>
+                </header>
+                <p>
+                  The clock element displays both the time and the local
+                  temperature in a very pleasing frosted glass effect.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <a class="image">
+              <img
+                src="../images/minimalist_clock/Screen3.png"
+                alt=""
+                data-position="center center"
+              />
+            </a>
+            <div class="content">
+              <div class="inner">
+                <header class="major">
+                  <h3>Keep track of time even in fullscreen</h3>
+                </header>
+                <p>
+                  The clock element can be displayed in fullscreen mode,
+                  allowing you to keep track of the time at all moments.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <a class="image">
+              <img
+                src="../images/minimalist_clock/Screen4.png"
+                alt=""
+                data-position="center center"
+              />
+            </a>
+            <div class="content">
+              <div class="inner">
+                <header class="major">
+                  <h3>Popup</h3>
+                </header>
+                <p>The extension popup gives you more options:
+                  <ul>
+                    <li>Update position: update the position used for the weather update</li>
+                    <li>24H/12H: switches  between the 24 hour format and 12 hour format</li>
+                    <li>°C/°F: switches between degree celcius and degree fahrenheit</li>
+                    <li>Hide/Show: hides or show the clock element</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="content">
+              <div class="inner">
+                <header class="major">
+                  <h3>Commands</h3>
+                </header>
+                  <ul>
+                    <li>Hide: Ctrl+Shift+Up or Command+Shift+Up</li>
+                    <li>Show: Ctrl+Shift+Down or Command+Shift+Down</li>
+                  </ul>
+ 
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/marvin-libam"
+                class="icon brands alt fa-linkedin"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/reddcarp"
+                class="icon brands alt fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+          <p>
+            Email:
+            <a href="mailto: libam.marvin@gmail.com">libam.marvin@gmail.com</a>
+          </p>
+          <ul class="copyright">
+            <li>&copy; Marvin libam</li>
+            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
